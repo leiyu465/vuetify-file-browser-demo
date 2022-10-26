@@ -15,7 +15,6 @@
 
 <script>
 import FileBrowser from "vuetify-file-browser";
-
 export default {
     components: {
         FileBrowser

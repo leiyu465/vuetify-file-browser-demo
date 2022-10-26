@@ -11,7 +11,6 @@
 
 <script>
 import Navbar from "./components/Navbar";
-
 export default {
     name: "App",
     components: {
@@ -24,7 +23,6 @@ export default {
 * {
     text-transform: initial;
 }
-
 .v-list-group__header__prepend-icon {
     margin-right: 10px;
 }

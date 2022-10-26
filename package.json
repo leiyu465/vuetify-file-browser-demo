@@ -4,53 +4,55 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "cross-env NODE_ENV=production vue-cli-service build",
+    "build": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "postinstall": "npm run build",
     "start": "node server.js"
   },
   "dependencies": {
-    "@mdi/font": "^3.6.95",
-    "core-js": "^2.6.5",
-    "cross-env": "^5.2.1",
-    "express": "^4.17.1",
-    "register-service-worker": "^1.6.2",
+    "@mdi/font": "5.9.55",
+    "core-js": "^3.8.3",
+    "register-service-worker": "^1.7.2",
     "roboto-fontface": "*",
-    "serve-static": "^1.14.1",
-    "string-replace-loader": "^2.2.0",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "vuetify": "^2.0.0",
-    "vuetify-file-browser": "^1.0.2"
+    "string-replace-loader": "^3.1.0",
+    "vue": "^3.2.13",
+    "vue-router": "^4.1.5",
+    "vuetify": "^3.0.0-beta.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-e2e-nightwatch": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-plugin-pwa": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "husky": "^3.0.5",
-    "lint-staged": "^8.2.1",
-    "node-sass": "^4.9.0",
-    "prettier": "^1.18.2",
-    "sass": "^1.17.4",
-    "sass-loader": "^7.1.0",
-    "vue-cli-plugin-vuetify": "^0.6.3",
-    "vue-template-compiler": "^2.6.10",
-    "vuetify-loader": "^1.2.2"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.1.0",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }
